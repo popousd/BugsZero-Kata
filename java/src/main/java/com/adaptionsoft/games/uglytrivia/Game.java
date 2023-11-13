@@ -5,9 +5,9 @@ import java.util.LinkedList;
 
 public class Game {
     ArrayList players = new ArrayList();
-    int[] places = new int[6];
-    int[] purses  = new int[6];
-    boolean[] inPenaltyBox  = new boolean[6];
+    int[] places = new int[8];
+    int[] purses  = new int[8];
+    boolean[] inPenaltyBox  = new boolean[8];
     
     LinkedList popQuestions = new LinkedList();
     LinkedList scienceQuestions = new LinkedList();
@@ -49,7 +49,6 @@ public class Game {
 		}
 
 		return System.out.println("This game is limited to 8 players");
-
 	}
 	
 	public int howManyPlayers() {
@@ -116,7 +115,7 @@ public class Game {
 			case 2:
 			case 6:
 			case 10:
-				return "Pop";
+				return "Sports";
 			default:
 				return "Rock";
 		}
@@ -149,9 +148,7 @@ public class Game {
 		System.out.println(players.get(currentPlayer)+ " was sent to the penalty box");
 		inPenaltyBox[currentPlayer] = true;
 
-		// La partie peut être refacto
-		currentPlayer++;
-		if (currentPlayer == players.size()) currentPlayer = 0;
+		currentPlayer = (currentPlayer + 1) % players.size();
 		return true;
 	}
 
