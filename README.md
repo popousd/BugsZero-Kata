@@ -37,4 +37,4 @@ By Arlo Belshee
 [Bug teams](http://agileotter.blogspot.fr/2014/01/bug-teams-well-meaning-foolishness.html)
 
 ## Contribute
-Contributions of all forms are welcome. Submit another language by fork/merge-request. If you're missing something or hava a question please create an issue.
+Contributions of all forms are welcome. Submit another language by fork/merge-request. If you're missing something or hava a question please create an issue..
