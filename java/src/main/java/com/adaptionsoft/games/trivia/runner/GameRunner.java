@@ -7,21 +7,22 @@ import com.adaptionsoft.games.uglytrivia.Game;
 
 public class GameRunner {
 
+	List<String> playerNames = Arrays.asList("Chet", "Pat", "Sue");
+
 	private static boolean notAWinner;
 
 	public static void main(String[] args) {
-		Random rand = new Random();
-		playGame(rand);
-		
+		playGame();
 	}
 
-	public static void playGame(Random rand) {
+	public static void playGame() {
+		Random rand = new Random();
 		Game aGame = new Game();
 
-		aGame.add("Chet");
-		aGame.add("Pat");
-		aGame.add("Sue");
-
+		//Pour ajouter des membres dans faire un add a chaque fois
+		for (String playerName : playerNames) {
+			aGame.add(playerName);
+		}
 
 		do {
 
